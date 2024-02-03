@@ -148,7 +148,8 @@ body {
 
 #calculator {
     border: red solid .25vw;
-    height: 45vw;
+    background-color: rgb(51, 0, 0);
+    height: 36vw;
     width: 25vw;
     border-radius: 1vw;
     display: flex;
@@ -158,18 +159,53 @@ body {
 
 #display {
     resize: none;
-    border: red solid .25vw;
-    border-radius: .5vw;
     outline: none;
     margin-top: 1vw;
     width: 22vw;
     height: 4vw;
-    color: red;
     font-size: 3.4vw;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    caret-color:black;
+    caret-color: black;
+    border: red solid .25vw;
+    border-radius: .5vw;
+    color: red;
+}
+
+#buttons_container {
+    width: 22.5vw;
+    margin-top: 1vw;
+    font-size: 3.4vw;
+    display: flex;
+    gap: .5vw;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgb(51, 0, 0);
+}
+
+button {
+    color: red;
+    width: 4.5vw;
+    height: 4.5vw;
+    border: red solid .25vw;
+    border-radius: .5vw;
+    margin-bottom: 1vw;
+    font-size: 3.4vw;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(102, 0, 0);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#backspace_button,
+#delete_button {
+    width: 10.5vw;
 }
