@@ -43,27 +43,9 @@ function display_symbol(symbol) {
     }
 }
 
-function add() {
+function apply(sign_to_be_updated) {
     number_one = display.textContent
-    sign = "+"
-    calculation_is_pending = true
-}
-
-function subtract() {
-    number_one = display.textContent
-    sign = "-"
-    calculation_is_pending = true
-}
-
-function multiply() {
-    number_one = display.textContent
-    sign = "*"
-    calculation_is_pending = true
-}
-
-function divide() {
-    number_one = display.textContent
-    sign = "/"
+    sign = sign_to_be_updated
     calculation_is_pending = true
 }
 
@@ -110,13 +92,12 @@ document.getElementById("6").addEventListener("click", () => display_symbol("6")
 document.getElementById("7").addEventListener("click", () => display_symbol("7"))
 document.getElementById("8").addEventListener("click", () => display_symbol("8"))
 document.getElementById("9").addEventListener("click", () => display_symbol("9"))
-
 document.getElementById(".").addEventListener("click", () => display_symbol("."))
 
-document.getElementById("+").addEventListener("click", () => add())
-document.getElementById("-").addEventListener("click", () => subtract())
-document.getElementById("*").addEventListener("click", () => multiply())
-document.getElementById("/").addEventListener("click", () => divide())
+document.getElementById("+").addEventListener("click", () => apply("+"))
+document.getElementById("-").addEventListener("click", () => apply("-"))
+document.getElementById("*").addEventListener("click", () => apply("*"))
+document.getElementById("/").addEventListener("click", () => apply("/"))
 
 document.getElementById("=").addEventListener("click", () => solve())
 
